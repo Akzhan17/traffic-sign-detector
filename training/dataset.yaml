@@ -1,0 +1,49 @@
+names:
+  0: speed_limit_20
+  1: speed_limit_30
+  2: speed_limit_50
+  3: speed_limit_60
+  4: speed_limit_70
+  5: speed_limit_80
+  6: end_of_speed_limit_80
+  7: speed_limit_100
+  8: speed_limit_120
+  9: no_passing
+  10: no_passing_trucks
+  11: right_of_way_at_next_intersection
+  12: priority_road
+  13: yield
+  14: stop
+  15: no_vehicles
+  16: vehicles_over_3_5_tons_prohibited
+  17: no_entry
+  18: general_caution
+  19: dangerous_curve_left
+  20: dangerous_curve_right
+  21: double_curve
+  22: bumpy_road
+  23: slippery_road
+  24: road_narrows_on_right
+  25: road_work
+  26: traffic_signals
+  27: pedestrians
+  28: children_crossing
+  29: bicycles_crossing
+  30: ice_snow
+  31: wild_animals_crossing
+  32: end_of_all_speed_and_passing_limits
+  33: turn_right_ahead
+  34: turn_left_ahead
+  35: ahead_only
+  36: go_straight_or_right
+  37: go_straight_or_left
+  38: keep_right
+  39: keep_left
+  40: roundabout
+  41: end_of_no_passing
+  42: end_of_no_passing_trucks
+nc: 43
+path: ./data
+test: images/test
+train: images/train
+val: images/val

@@ -1,0 +1,18 @@
+# Core dependencies
+ultralytics
+opencv-python
+fastapi
+uvicorn
+python-multipart
+numpy
+pillow
+pydantic
+torch
+torchvision
+
+# Optional - for frontend
+streamlit
+
+# Utilities
+python-dotenv
+requests

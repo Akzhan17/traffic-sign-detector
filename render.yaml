@@ -1,0 +1,33 @@
+# render.yaml - Complete deployment configuration
+services:
+  # Backend API Service
+  - type: web
+    name: traffic-sign-api
+    runtime: python
+    plan: free
+    buildCommand: |
+      cd backend
+      pip install -r requirements.txt
+    startCommand: |
+      cd backend
+      uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
+      - key: MODEL_PATH
+        value: model/best.pt
+
+  # Frontend Web Service
+  - type: web
+    name: traffic-sign-web
+    runtime: python
+    plan: free
+    buildCommand: |
+      pip install streamlit pillow opencv-python-headless numpy requests ultralytics torch torchvision
+    startCommand: |
+      streamlit run frontend/streamlit_app.py --server.port $PORT --server.address 0.0.0.0 --server.enableCORS true --server.enableXsrfProtection false
+    envVars:
+      - key: API_URL
+        value: https://traffic-sign-api.onrender.com
+      - key: USE_LOCAL_MODEL
+        value: "true"
